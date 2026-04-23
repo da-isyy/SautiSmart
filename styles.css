@@ -1,0 +1,130 @@
+/* ========================================== */
+/* 1. COLOR PALETTE VARIABLES                 */
+/* ========================================== */
+:root {
+    --deep-dark-blue: #1B1B3A;
+    --plum: #693668;
+    --magenta: #A74482;
+    --bright-pink: #F84AA7;
+    --vibrant-red: #FF3562;
+    --bg-light: #F8F9FA;
+}
+
+/* ========================================== */
+/* 2. GLOBAL STYLES & TYPOGRAPHY              */
+/* ========================================== */
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a4a4a;
+}
+
+/* ========================================== */
+/* 3. PALETTE UTILITY CLASSES                 */
+/* ========================================== */
+
+/* Background Colors */
+.bg-deep-dark-blue { background-color: var(--deep-dark-blue) !important; }
+.bg-plum           { background-color: var(--plum) !important; }
+.bg-magenta        { background-color: var(--magenta) !important; }
+.bg-bright-pink    { background-color: var(--bright-pink) !important; }
+.bg-vibrant-red    { background-color: var(--vibrant-red) !important; }
+
+/* Text Colors */
+.text-deep-dark-blue { color: var(--deep-dark-blue) !important; }
+.text-plum           { color: var(--plum) !important; }
+.text-magenta        { color: var(--magenta) !important; }
+.text-bright-pink    { color: var(--bright-pink) !important; }
+.text-vibrant-red    { color: var(--vibrant-red) !important; }
+
+/* ========================================== */
+/* 4. NAVBAR STYLING                          */
+/* ========================================== */
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.nav-hover {
+    transition: color 0.3s ease;
+}
+.nav-hover:hover {
+    color: var(--bright-pink) !important;
+}
+
+/* ========================================== */
+/* 5. UI COMPONENTS                           */
+/* ========================================== */
+
+/* Shared icon base — circular/squircle */
+.module-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    flex-shrink: 0;
+}
+
+/* Standardized Card Style */
+.theory-card {
+    border: none;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.theory-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Coloured top-border accents */
+.border-top-plum    { border-top: 5px solid var(--plum); }
+.border-top-pink    { border-top: 5px solid var(--bright-pink); }
+.border-top-magenta { border-top: 5px solid var(--magenta); }
+
+/* ========================================== */
+/* 6. THEORY SECTION SPECIFICS                */
+/* ========================================== */
+
+/* Card body text */
+.theory-card p {
+    line-height: 1.7;
+    color: #4a4a4a;
+}
+
+/* Custom bullet list for the Scales section */
+.custom-list {
+    padding-left: 1.5rem;
+}
+.custom-list li {
+    margin-bottom: 10px;
+    list-style-type: none;
+    position: relative;
+}
+.custom-list li::before {
+    content: "•";
+    color: var(--magenta);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* ========================================== */
+/* 7. SONGS SECTION — DROPDOWN FILTER         */
+/* ========================================== */
+.custom-select {
+    border: 2px solid var(--deep-dark-blue);
+    border-radius: 8px;
+    color: var(--deep-dark-blue);
+    font-weight: bold;
+    cursor: pointer;
+}
+.custom-select:focus {
+    border-color: var(--bright-pink);
+    box-shadow: 0 0 0 0.25rem rgba(248, 74, 167, 0.25);
+}
